@@ -68,3 +68,12 @@
         align-items: center;
     }
 }
+@media (max-width: 786px) {
+   .hero {
+        grid-template-columns: 1fr;
+        margin-top: 0;
+    }
+    .hero--details {
+        margin-top: 0px;
+    }
+}
