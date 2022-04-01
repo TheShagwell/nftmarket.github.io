@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Oxanium:wght@700&family=Poppins:wght@400;500;600;700&display=swap');
+:root {
+    --secondary-color: hsla(235, 67%, 58%, 0.1);
+    --primary-color: hsla(235, 67%, 58%, 1);
+    --border--card--color: hsla(0, 0%, 100%, 0.5);
+    --white-color: #fff;
+    --nav--white-color: hsla(100, 53%, 97%, 1);
+    --body: hsla(235, 32%, 8%);
+    --card-profile-name: hsla(235, 11%, 47%, 1);
+    /* =========== Btn ============ */
+    --btn-sm: 0.75rem 2.125rem;
+    --btn-padding: 0.75rem 1.5rem;
+    /* ========= Border ========== */
+    --border-line-thin: 1px solid var(--secondary-color);
+    --border-radius: 10px;
+    --border-radius--hero--card: 2px;
+}
+
+
+/* ============== RESET STYLING ============== */
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    text-rendering: optimizeLegibility;
+    --webkit-font-smoothing: antialiased;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--body);
+    background-image: radial-gradient(circle at top right, hsla(235, 67%, 58%, 0.1) 0%, var(--body) 100%);
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+
+/* Utilities */
+
+a {
+    text-decoration: none;
+    color: var(--font-color);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* GENERAL STYLES */
+
+.container {
+    max-width: 75.938rem;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.text-bold {
+    font-weight: var(--font-weight-bold);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: var(--btn-padding);
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: var(--border-radius);
+}
+
+.btn-secondary {
+    border: var(--border-line-thin);
+    color: var(--white-color);
+    background: var(--secondary-color);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.btn-sm {
+    border-radius: var(--border-radius);
+    padding: var(--btn-sm);
+    text-align: center;
+}
+
+
+/* ===============HEADER================== */
+
+.nav,
+.nav--items,
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    justify-content: space-between;
+    padding: 1.25rem 0;
+}
+
+.logo .logo--img {
+    max-width: 2.5rem;
+}
+
+.logo h4 {
+    margin-left: .5rem;
+    font-size: 1.5rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    color: var(--white-color);
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger svg {
+    stroke: var(--primary-color);
+}
+
+.nav--items li {
+    margin-left: 30px;
+}
+
+.nav--items li a {
+    color: var(--card-profile-name);
+    position: relative;
+    padding-bottom: .5rem;
+}
+
+.nav--items li a.active,
+.nav--items li a:hover {
+    color: var(--primary-color);
+}
+
+.nav--items li .active::before,
+.nav--items li a:hover::before {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: var(--primary-color);
+    left: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+.btn:hover,
+.btn--header:hover {
+    background-color: var(--primary-color);
+}
+
+
+/* =======================Hero Sections======================= */
+
+.hero {
+    display: grid;
+    grid-template-columns: 600px auto;
+    justify-content: space-between;
+    margin-top: 30px;
+    position: relative;
+}
+
+.hero--details {
+    margin-top: 50px;
+}
+
+.hero--details h4 {
+    font-size: 54px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: var(--white-color);
+}
+
+.hero--details h4 .nft--blue {
+    color: var(--primary-color);
+}
+
+.hero--details p {
+    margin-top: 30px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: var(--card-profile-name);
+    line-height: 1.8;
+}
+
+.hero--details .buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.relative--grid--img {
+    position: relative;
+}
+
+.absolute--grid--time {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 50px;
+    background-color: hsla(0, 0%, 100%, 0.1);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.absolute--grid--time span {
+    font-weight: 500;
+    color: var(--white-color);
+}
+
+.absolute--grid--time .timer {
+    font-size: 23px;
+    font-weight: 700;
+    color: var(--white-color);
+}
+
+.counter--sales {
+    margin-top: 170px;
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.counter .count h4 {
+    font-size: 45px;
+    font-family: 'Oxanium', serif;
+    color: var(--white-color);
+}
+
+.counter .count span {
+    font-family: 'Poppins', sans-serif;
+    color: var(--card-profile-name);
+}
+
+.grid--item-img .hero--img {
+    max-width: 450px;
+}
+
+.bid {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    margin-top: 10px;
+}
+
+.bid .bid--amount h4,
+.bid--time h4 {
+    color: hsla(288, 8%, 77%, 1);
+    font-family: 'Poppins', sans-serif;
+}
+
+.bid .bid--amount span {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.bid .bid--amount span,
+.bid .bid--time .time span {
+    font-family: 'Poppins', sans-serif;
+    color: var(--white-color);
+}
+
+.bid .bid--time .time {
+    display: flex;
+    gap: 10px;
+}
+
+.bid .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ======================================== */
+
+.trending--head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin-top: 100px;
+}
+
+.trending--head h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: var(--white-color);
+}
+
+.trending--head span a {
+    color: var(--primary-color);
+    font-size: 20px;
+}
+
+.grid--items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+    margin-top: 20px;
+}
+
+.grid--item {
+    padding: 10px;
+    background-color: var(--secondary-color);
+    border: var(--border-line-thin);
+    border-radius: var(--border-radius);
+}
+
+.grid--item .grid--header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.grid--item .grid--header .img {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.grid--item .grid--item-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grid--item .grid--header .img .profile--name h4 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--white-color);
+    font-weight: 500;
+}
+
+.grid--item .grid--header .img .profile--name span {
+    font-family: 'Poppins', sans-serif;
+    color: var(--card-profile-name);
+    font-weight: 400;
+}
+
+.grid--item--sales {
+    margin-top: 10px;
+}
+
+.grid--item .grid--header .img img {
+    max-width: 50px;
+}
+
+.grid--header .social--likes {
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.grid--header .social--likes svg {
+    stroke: var(--primary-color);
+    width: 20px;
+    height: 20px;
+}
+
+.grid--header .social--likes h4 {
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.grid--item--sales {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.grid--item--sales .bid--amount h4,
+.bid--time h4 {
+    color: hsla(288, 8%, 77%, 1);
+    font-family: 'Poppins', sans-serif;
+}
+
+.grid--item--sales .bid--amount span {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.grid--item--sales .bid--amount span,
+.grid--item--sales .bid--time .time span {
+    font-family: 'Poppins', sans-serif;
+    color: var(--white-color);
+}
+
+.grid--item--sales .bid--time .time {
+    display: flex;
+    gap: 10px;
+}
+
+.grid--items--buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.grid--items--buttons .btn {
+    flex: 1;
+}
+
+@media (max-width: 320px) {
+    .grid--items--buttons .btn {
+        flex: 1;
+    }
+    .grid--items--buttons .btn {
+        font-size: 12px;
+    }
+}

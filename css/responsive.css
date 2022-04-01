@@ -1,0 +1,70 @@
+@media (max-width: 436px) {
+    .btn {
+        font-size: 14px;
+    }
+    .nav {
+        justify-content: space-between;
+    }
+    .nav .btn {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+    .nav--items {
+        width: 200px;
+        height: 100%;
+        position: absolute;
+        left: -300px;
+        top: 0;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+        background-color: var(--primary-color);
+    }
+    .nav--items .active {
+        left: 0;
+    }
+    .nav--items li {
+        margin-left: 0;
+    }
+    .nav--items li a.active {
+        color: inherit;
+    }
+    .hero {
+        grid-template-columns: 1fr;
+        margin-top: 0;
+    }
+    .hero--details {
+        margin-top: 0px;
+    }
+    .hero--details h4 {
+        display: inline-block;
+        font-size: 35px;
+        line-height: 1.6;
+    }
+    .hero--details p {
+        font-size: 14px;
+        width: 95%;
+    }
+    .hero--details p,
+    .hero--details .buttons {
+        margin-top: 10px;
+    }
+    .counter {
+        gap: 0px;
+    }
+    .counter--sales {
+        margin-top: 50px;
+    }
+    .counter .count h4 {
+        font-size: 30px;
+    }
+    .hero .grid--item {
+        margin: 30px auto 0;
+    }
+    .trending--items .hero--card {
+        flex-direction: column;
+        align-items: center;
+    }
+}
