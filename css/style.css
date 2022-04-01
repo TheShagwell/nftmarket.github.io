@@ -4,6 +4,7 @@
     --primary-color: hsla(235, 67%, 58%, 1);
     --border--card--color: hsla(0, 0%, 100%, 0.5);
     --white-color: #fff;
+--hero-sub-color: #E0E1E4;
     --nav--white-color: hsla(100, 53%, 97%, 1);
     --body: hsla(235, 32%, 8%);
     --card-profile-name: hsla(235, 11%, 47%, 1);
@@ -215,7 +216,7 @@ img {
     margin-top: 30px;
     font-size: 1rem;
     font-family: 'Poppins', sans-serif;
-    color: var(--card-profile-name);
+    color: var(--hero-sub-color);
     line-height: 1.8;
 }
 
